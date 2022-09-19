@@ -1,0 +1,83 @@
+body{
+	margin: 0;
+}
+
+header{
+	width: 100%;
+	background-color: #00b4de;
+}
+
+#btn-menu{
+	display: none;
+ 
+}
+
+header label{
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	border-right: 1px solid red;
+}
+
+header label:hover{
+	cursor: pointer;
+	background-color: orange;
+}
+
+.menu ul{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	display: flex;  /*se caso queira colocar os menu do lado esquerdo, tire o justify-content: flex-end;*/
+    justify-content: flex-end;
+}
+
+.menu li:hover{
+	background-color: violet;
+    color: crimson;
+}
+
+.menu li a:hover{color: coral;}
+
+.menu li{
+	border-right: 1px solid #fff;
+}
+
+.menu li a{
+	display: block;
+	padding: 15px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+	header label{
+		display: block;
+		margin-left: 90%;
+	}
+	#btn-menu{
+		
+	  margin-left: 90%;
+	}
+	.menu{
+		position: absolute;
+		width: 70%; /* deixa a caixa de menu menor*/
+		margin-left: -70%; /*controla abertura da caixa*/
+		background-color: #aca;
+		transition: all 0.6s; /*controla velocidade do menu*/
+	}
+
+	.menu ul{
+		flex-direction: column;
+	}
+	.menu li{
+		border-top: 1px solid #fff;
+	}
+	#btn-menu:checked~.menu{
+		margin-left: 70%; 
+		
+	}
+}
+
+/*a mudança de tamanho, cores pode ser feita pelo aluno*/
